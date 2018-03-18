@@ -26,6 +26,7 @@ def decode_audio_url(string, user_id):
     ops_list = vk_o(vals[1]).split('\x09')[::-1]
 
     for op_data in ops_list:
+
         split_op_data = op_data.split('\x0b')
         cmd = split_op_data[0]
         if len(split_op_data) > 1:
